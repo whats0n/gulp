@@ -1,0 +1,37 @@
+---
+title: Wtsn
+items: [
+	{
+		name: 'name1',
+		date: '01'
+	},
+	{
+		name: 'name2',
+		date: '02'
+	},
+	{
+		name: 'name3',
+		date: '03'
+	}
+]
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include "partials/_head.html" %}
+<body>
+	<h1>Live</h1>
+	{% for item in items %}
+	<div class="item">
+		<div class="item__name">{{ item.name }}</div>
+		<div class="item__date">{{ item.date }}</div>
+	</div>
+	{% endfor %}
+	<i class="icon icon-down"></i>
+	<i class="icon icon-logo"></i>
+	<i class="icon icon-next"></i>
+	<i class="ic-home"></i>
+	<i class="ic-weight"></i>
+	<svg class="svg svg-logo"><use xlink:href="img/svg.svg#svg-logo"></use></svg>
+</body>
+<script src="js/app.js"></script>
+</html>
