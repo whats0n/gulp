@@ -1,5 +1,3 @@
-// +s($s-iconname) = sprite
-
 html, body
 	height: 100% 
 
@@ -9,7 +7,7 @@ body
 	background: linear-gradient(45deg, #ccc, #666)
  
 h1
-	color: red
+	// color: red
 
 p
 	color: red
@@ -33,3 +31,120 @@ strong
 	width: 100px
 	height: 50px
 	color: red
+
+=r1
+	@media only screen and (max-width: "1024px")
+		@content
+
+body
+	height: 500px
+
+.my-select
+	position: relative
+	margin: 30px 10px
+	cursor: pointer
+	select
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		visibility: hidden
+		+r1
+			visibility: visible
+			z-index: 3
+
+	&__text
+		border: 1px solid black
+		background: #fff
+		color: #333
+		border-radius: 3px
+		padding: 8px 10px
+		z-index: 1
+		position: relative
+		&_placeholder
+			font-style: italic
+			color: gray
+
+	&__icon
+		position: absolute
+		right: 15px
+		top: 50%
+		margin-top: -3px
+		border-style: solid
+		border-color: #000 transparent transparent
+		border-width: 6px 4px 0
+		z-index: 2
+
+	&__list
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		margin: 10px 0 0
+		z-index: 200
+		background: #fff
+		padding: 8px 0
+		border: 1px solid black
+		border-radius: 3px
+		max-height: 200px
+		overflow-y: auto
+
+	&__item
+		padding: 4px 10px
+		&:hover
+			background: #333
+			color: #fff
+
+#box
+	width: 100px
+	height: 100px
+	background: blue
+
+.night
+	color: white
+	background: black
+
+.day 
+	color: black
+	background: white
+
+.hello-dos
+	color: white
+	background: blue
+
+.slide
+	background: linear-gradient(to left, red 0%, black 100%)
+	float: right
+	height: 300px
+	line-height: 300px
+	text-align: center
+	font-size: 100px
+	font-weight: bold
+
+.slider
+	width: 293px
+	margin: 200px auto
+	&:after
+		content: ""
+		display: block
+		clear: both
+	&__inner
+		overflow: hidden
+		width: 293px*3
+		float: right
+	&__row
+		float: left 
+		&:after
+			content: ""
+			display: block
+			clear: both
+
+.nav
+	&__item
+		margin: 20px
+		width: 20px
+		height: 20px
+		background: black
+		cursor: pointer
